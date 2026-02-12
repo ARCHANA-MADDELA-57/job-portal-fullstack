@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
- //Middleware to protext routes
+ //Middleware to protect routes
  const protect = async (req, res, next)=> {
     try {
         let token = req.headers.authorization;
@@ -18,4 +18,4 @@ const User = require("../models/User");
     }
  };
 
- module.exports = {protect};
+ module.exports = { protect };
